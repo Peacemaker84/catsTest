@@ -52,13 +52,23 @@ const createCard = function (cat, parent) {
 
   const del = document.createElement("button");
   del.innerText = "delete";
+  del.classList.add("deletetCat");
   del.id = cat.id;
   del.addEventListener("click", function (e) {
     let id = e.target.id;
     deleteCat(id, card);
   });
 
-  card.append(img, name, del);
+  const editCat = document.createElement("button");
+  editCat.innerText = "edit";
+  editCat.classList.add("editCat");
+  editCat.name = cat.name;
+  editCat.addEventListener("click", function (elc) {
+    let name = elc.target.name;
+    editCat(name, card);
+  });
+
+  card.append(img, name, del, editCat);
   parent.append(card);
 };
 

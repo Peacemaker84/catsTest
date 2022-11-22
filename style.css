@@ -11,7 +11,7 @@ a {
   width: 1000px;
   margin: auto;
   min-height: 100vh;
-  background: orange;
+  background: rgb(241, 195, 108);
   display: grid;
   gap: 30px;
   grid-template-rows: 70px 1fr 50px;
@@ -50,6 +50,7 @@ main {
   gap: 20px;
   padding: 10px;
   border: 1px solid;
+  border-radius: 10px;
 }
 .card-pic {
   background-position: center;
@@ -57,6 +58,18 @@ main {
   background-repeat: no-repeat;
   background-color: #dedede;
   height: 180px;
+  border-radius: 10px;
+  cursor: pointer;
+  filter: grayscale(1);
+  transition: 0.3s linear;
+}
+
+.card:hover {
+  border: 2px solid blue;
+}
+
+.card-pic:hover {
+  filter: grayscale(0);
 }
 .card h3 {
   text-align: center;
@@ -83,6 +96,7 @@ main {
   padding: 20px;
   background-color: #fff;
   position: relative;
+  border-radius: 10px;
 }
 .popup__close {
   width: 30px;
@@ -95,11 +109,14 @@ main {
   position: absolute;
   top: 10px;
   right: 10px;
+  margin-right: 10px;
 }
 .popup__close:hover {
-  background-color: #222;
+  background-color: green;
   color: #fff;
-  border-color: #222;
+  border-color: red;
+  color: red;
+  border-radius: 50px;
 }
 .popup__close::after {
   content: "\26CC";
@@ -108,4 +125,25 @@ main {
 #addForm {
   display: grid;
   gap: 20px;
+}
+
+.btn:hover {
+  color: orange;
+}
+.logo:hover {
+  color: orange;
+}
+.editCat {
+  border-radius: 5px;
+}
+.deletetCat {
+  border-radius: 5px;
+}
+.editCat:hover {
+  background-color: green;
+  color: #fff;
+}
+.deletetCat:hover {
+  background-color: red;
+  color: #fff;
 }
